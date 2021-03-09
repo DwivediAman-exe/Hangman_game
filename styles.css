@@ -12,7 +12,7 @@ body {
     height: 80vh;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 h2 {
@@ -68,9 +68,65 @@ h2 {
     font-size: 20px;
     align-items: center;
     justify-content: center;
-    margin: 1px 3px;
-    padding-top: 10px;
+    margin: 0px 3px;
+    padding-top: 9px;
     height: 40px;
-    width: 20px;
+    width: 25px;
 }
+
+.popup_container {
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none; 
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    background: green;
+    border-radius: 6px;
+    box-shadow: 0 15px 10px 3px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.popup button {
+    cursor: pointer;
+    background-color: paleturquoise;
+    color: rgb(121, 12, 121);
+    border: 0;
+    margin-top: 10px;
+    padding: 10px 10px;
+    font-size: 16px;
+}
+
+.popup button:active {
+    transform: scale(0.98);
+}
+
+.popup button:focus {
+    outline: 0;
+}
+
+.notification_container {
+    background-color: rgba(236, 225, 225, 0.3);
+    border-radius: 10px 10px 0 0;
+    padding: 15px 20px;
+    position: absolute;
+    bottom: -50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.notification_container p {
+    margin: 0;
+}
+
+.notification_container.show{
+    transform: translateY(-50px);
+}
+
 
