@@ -9,3 +9,7 @@ body {
     stroke-width: 1vh;
     stroke-linecap: round;
 }
+
+.figure_part {
+    display: none;
+}
