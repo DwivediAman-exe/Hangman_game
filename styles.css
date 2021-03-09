@@ -1,6 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: rgb(3, 5, 14);
     color: rgb(238, 130, 130);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h2 {
+    margin: 20px 0 0 0;
 }
 
 .figure_container {
@@ -10,6 +26,51 @@ body {
     stroke-linecap: round;
 }
 
+.game_container {
+    padding: 20px 30px;
+    position: relative;
+    margin: auto;
+    height: 500px;
+    width: 350px;
+}
+
 .figure_part {
     display: none;
 }
+
+.wrong_letter_containers {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.wrong_letter_containers p {
+    margin: 0 0 5px;
+}
+
+.wrong_letter_containers span {
+    font-size: 25px;
+}
+
+.word {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.letter {
+    border-bottom: 3px solid #fff;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 1px 3px;
+    padding-top: 10px;
+    height: 40px;
+    width: 20px;
+}
+

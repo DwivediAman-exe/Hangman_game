@@ -8,9 +8,10 @@
     <title>Hangman</title>
 </head>
 <body>
-    <h2>Find the Hidden Word</h2>
+    <h2>Hangman</h2>
+    <h4>Find the Hidden Word</h4>
     <div class="game_container">
-        <svg height="500" width="500" class="figure_container">
+        <svg height="340" width="350" class="figure_container">
             <!--Rod section-->
             <line x1="60" y1="20" x2="140" y2="20" />
             <line x1="140" y1="20" x2="140" y2="80"/>
@@ -27,7 +28,28 @@
             <line x1="110" y1="240" x2="140" y2="210" class="figure_part" />
             <line x1="140" y1="210" x2="170" y2="240" class="figure_part" />
         </svg>
+        <div class="wrong_letter_containers">
+            <div id="wrong_letters">
+                <p>wrong</p>
+                <span>e,r,t,y</span>
+            </div>
+        </div>
+        <div class="word" id="word">
+            <div class="letter">h</div>
+            <div class="letter">e</div>
+            <div class="letter">l</div>
+            <div class="letter">l</div>
+            <div class="letter">o</div>
+        </div>
     </div>
+    <!--Container for final display-->
+    <div class="popup_container" id="popup_container">
+        <h2 id="#final-message">You have won</h2>
+        <button id="play_button">Play again</button>
+    </div>
+    <!--Notification-->
+    <div class="notification_container" id="#notification_container"></div>
+    <p>You have already inserted this letter</p>
     <script src="./script.js"></script>
 </body>
 </html>
