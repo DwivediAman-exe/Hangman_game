@@ -15,6 +15,7 @@ const correctLetters = [];
 const wrongLetters = [];
 
 //show hidden word
+
 function displayWord() {
     wordEL.innerHTML = ` ${selectedWord
         .split('')
@@ -31,7 +32,50 @@ function displayWord() {
         finalMessage.innerText = "Congratulations u won !!";
         popup.style.display = "flex";
     }
-    
+
 }
+
+// update wrong letters
+
+function updateWrongLetterEl() {
+
+}
+
+// show notification 
+
+function showNotification() {
+    notification.classList.add("show");
+
+    setTimeout( () => {
+            notification.classList.remove("show");
+    },2000);
+}
+
+// Key event listner
+
+window.addEventListener('keydown', e => {
+    if(e.keyCode >= 65 && e.keyCode <= 90) {
+        const letter = e.key;
+
+        if(selectedWord.includes(letter)) {
+            if(!correctLetters.includes(letter)) {
+                correctLetters.push(letter);
+                displayWord();
+            }
+            else {
+                showNotification();
+            }
+        }
+        else {
+            if(!wrongLetters.includes(letter)) {
+                wrongLetters.push(letter);
+                updateWrongLetterEl();
+            }
+            else {
+                showNotification();
+            }
+        }
+    }
+});
 
 displayWord();
